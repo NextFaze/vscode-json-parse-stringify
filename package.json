@@ -1,0 +1,62 @@
+{
+  "name": "json-parse-stringify",
+  "displayName": "JSON Parse & Stringify",
+  "description": "Quickly flick between stringified JSON and POJOs",
+  "version": "1.0.1",
+  "publisher": "nextfaze",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "categories": ["Formatters", "Other"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NextFaze/vscode-json-parse-stringify"
+  },
+  "keywords": ["json", "parse", "stringify"],
+  "author": "Zak Barbuto <zbarbuto@nextfaze.com>",
+  "activationEvents": [
+    "onCommand:extension.stringifyJson",
+    "onCommand:extension.parseJson"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.stringifyJson",
+        "title": "Stringify Javascript Object",
+        "category": "JSON"
+      },
+      {
+        "command": "extension.parseJson",
+        "title": "Parse Stringified JSON",
+        "category": "JSON"
+      }
+    ],
+    "configuration": {
+      "type": "string",
+      "title": "json-parse-stringify configuration",
+      "properties": {}
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/copy-paste": "^1.1.30",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "vsce": "^1.37.1",
+    "vscode": "^1.1.6"
+  },
+  "dependencies": {
+    "copy-paste": "^1.3.0"
+  }
+}
