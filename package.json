@@ -2,7 +2,7 @@
   "name": "json-parse-stringify",
   "displayName": "JSON Parse & Stringify",
   "description": "Quickly flick between stringified JSON and POJOs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "nextfaze",
   "icon": "icon.png",
   "engines": {
